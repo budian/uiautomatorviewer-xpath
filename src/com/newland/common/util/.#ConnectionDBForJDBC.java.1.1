@@ -1,0 +1,34 @@
+package com.newland.common.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.newland.common.FinalConfig;
+
+public class ConnectionDBForJDBC {
+
+	/**
+	 * 获取数据库连接--JDBC
+	 * @param url
+	 * @param userName
+	 * @param passWord
+	 * @return
+	 * @throws SQLException
+	 */
+    public static Connection getConnection(String url, String userName, String passWord) throws SQLException {
+        Connection dbcon = null;
+        String driverName;
+        driverName = FinalConfig.driverName;
+        try {
+            Class.forName(driverName);
+            dbcon = DriverManager.getConnection(url, userName, passWord);
+        } catch (ClassNotFoundException e) {
+        	e.printStackTrace();
+        } catch (SQLException e) {
+        	e.printStackTrace();
+        }
+        return dbcon;
+    }
+    
+}

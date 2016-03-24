@@ -1,0 +1,2 @@
+#http服务配置
+httpServer=http://10.1.4.56:8080/AppAutoTest/
