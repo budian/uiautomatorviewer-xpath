@@ -29,8 +29,8 @@ public class DebugBridge {
 
     @SuppressWarnings("unused")
 	private static String getAdbLocation() {
-//        String toolsDir = System.getProperty("com.android.uiautomator.bindir"); //$NON-NLS-1$
-    	String toolsDir = "E:\\android\\android-sdk-windows\\tools";
+        String toolsDir = System.getProperty("com.android.uiautomator.bindir"); //$NON-NLS-1$
+//    	String toolsDir = "E:\\android\\android-sdk-windows\\tools";
         if (toolsDir == null) {
             return null;
         }
